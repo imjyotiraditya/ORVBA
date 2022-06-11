@@ -3,10 +3,10 @@
 error_reporting(0);
 
 // make a mysql database connection and save it to a variable named $conn
-$db_host  = "localhost"; // database hostname
-$db_user  = "root"; // database username
-$db_pass  = ""; // database password
-$db_name  = "panda"; // database name
+$db_host  = getenv('DB_HOST'); // database hostname
+$db_user  = getenv('DB_USER'); // database username
+$db_pass  = getenv('DB_PASS'); // database password
+$db_name  = getenv('DB_NAME'); // database name
 
 // make the connection
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
