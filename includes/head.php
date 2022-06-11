@@ -33,7 +33,7 @@ include("config.php");
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <a class="nav-link text-white" href="/user/login.php">Login</a>
+          <a class="nav-link text-white" href="/user-login.php">Login</a>
           <li class="nav-item"></li>
 
           <li class="nav-item">

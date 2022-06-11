@@ -3,7 +3,23 @@ $title = 'Home';
 include('includes/head.php');
 ?>
 
+<!-- Background image -->
+<div class="bg-image  container-fluid" id="bgimage"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/77.webp'); height: 70vh; ">
+    <div class="row justify-content-center">
+        <div class="col-lg-12 text-white text-center mtfororvba ">
+            <h1 id="bgtext">On Road Vehicle Breakdown Assistance</h1>
+            <h2>Need roadside assistance?</h2>
+            <button type="button" class="btn btn-primary "> <a href="user-login.php"
+                    class="text-decoration-none text-black">Login</a></button>
+        </div>
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
 </div>
+
 <!-- Background image -->
 <!-- content  -->
 <div class="container-fluid">
@@ -106,7 +122,7 @@ include('includes/head.php');
             non
             iste aut. Nulla, harum porro!
             </p>
-            <button type="button" class="btn btn-primary mt-2  mb-3 " id="apply"> <a href="mechanic/register.php"
+            <button type="button" class="btn btn-primary mt-2  mb-3 " id="apply"> <a href="mechanic-register.php"
                     class="text-decoration-none text-white ">Apply now </a></button>
         </div>
     </div>

@@ -5,11 +5,11 @@
           <div class="row justify-content-evenly bg-dark text-white">
             <div class="col-lg-6 ">
               <h2 class="mt-3">Useful Links</h2>
-              <a class="mt-3" href="index.html">Home</a> <br>
-              <a class="mt-3" href="services.html">Services</a> <br>
-              <a class="mt-3" href="#blog">blog</a> <br>
-              <a class="mt-3" href="contact.html">Contact us</a> <br>
-              <a class="mt-3" href="Mlogin.html">Mechanic Login</a>
+              <a class="mt-3" href="index.php">Home</a> <br>
+              <a class="mt-3" href="services.php">Services</a> <br>
+              <a class="mt-3" href="#blog">Blog</a> <br>
+              <a class="mt-3" href="contact.php">Contact us</a> <br>
+              <a class="mt-3" href="mechanic-login.php">Mechanic Login</a>
             </div>
             <div class="col-lg-6 text-center mt-5">
               Design by-Abhisek praharaj <br>

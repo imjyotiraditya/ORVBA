@@ -1,12 +1,12 @@
 <?php
-$title = "User Register";
-include("../includes/head.php");
+$title = "Mechanic Register";
+include("includes/head.php");
 $error = ''; // var to hold errors
 $show_form = true; // the form will show until this is true
-if(isLoggedIn()) {
+if(isMechanic()) {
     // already logged in
     echo '<div class="container-fluid justify-content-center">
-    <h2 class="text-center">User Register</h2>
+    <h2 class="text-center">Mechanic Register</h2>
     <div class="row ">
         <div class="col-lg-3">
         </div>
@@ -19,7 +19,7 @@ if(isLoggedIn()) {
 </div>
 </div>
 </div>';
-    include("../includes/footer.php");
+    include("includes/footer.php");
     exit(); // stop the execution here
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -39,17 +39,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($password !== $confirm_password) {
             $error = 'Both passwords should be same!';
         } else {
-            $sql = "INSERT INTO users (name, email, phone, password, pin, address) VALUES ('$name','$email','$phone','$password','$pin','$address')";
+            $sql = "INSERT INTO mechanics (name, email, phone, password, pin, address) VALUES ('$name','$email','$phone','$password','$pin','$address')";
             if ($conn->query($sql) === TRUE) {
                 // register successful
                 echo '<div class="container-fluid justify-content-center">
-                <h2 class="text-center">User Registration</h2>
+                <h2 class="text-center">Mechanic Registers</h2>
                 <div class="row ">
                     <div class="col-lg-3">
                     </div>
                     <div class="col-lg-6">
                     <div class="alert alert-success">
-                <strong>Congratulations!</strong> Account registered successfully. You can <a href="login.php">Login</a> Now.
+                <strong>Congratulations!</strong> Account registered successfully. You can <a href="mechanic-login.php">Login</a> Now.
               </div>
               </div>
             <div class="col-lg-3">
@@ -70,12 +70,12 @@ if ($show_form == true) {
 
     <!-- Form -->
     <div class="container-fluid justify-content-center">
-        <h2 class="text-center">User Registration</h2>
+        <h2 class="text-center">Mechanic Register</h2>
         <div class="row ">
             <div class="col-lg-3">
             </div>
             <div class="col-lg-6">
-                <form method="post" action="register.php">
+                <form method="post" action="mechanic-register.php">
                     <?php
                     if (!empty($error)) {
                         echo '<div class="alert alert-danger">
@@ -120,5 +120,5 @@ if ($show_form == true) {
     </div>
 <?php
 }
-include("../includes/footer.php");
+include("includes/footer.php");
 ?>

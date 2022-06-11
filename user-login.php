@@ -1,6 +1,6 @@
 <?php
 $title = "User Login";
-include("../includes/head.php");
+include("includes/head.php");
 $error = ''; // var to hold errors
 $show_form = true; // the form will show until this is true
 if(isLoggedIn()) {
@@ -19,7 +19,7 @@ if(isLoggedIn()) {
 </div>
 </div>
 </div>';
-    include("../includes/footer.php");
+    include("includes/footer.php");
     exit(); // stop the execution here
 }
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -65,7 +65,7 @@ if ($show_form == true) {
         <div class="row">
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
-                <form method="post" action="login.php">
+                <form method="post" action="user-login.php">
                     <?php
                     if (!empty($error)) {
                         echo '<div class="alert alert-danger">
@@ -84,7 +84,7 @@ if ($show_form == true) {
                     <br />
                     <button type="submit" class="btn btn-primary">Login</button> <br />
                     <br />
-                    New to ORVBA? <a href="register.php" target="_blank">Sign up </a>
+                    New to ORVBA? <a href="user-register.php" target="_blank">Sign up </a>
                 </form>
             </div>
             <div class="col-lg-4"></div>
@@ -92,5 +92,5 @@ if ($show_form == true) {
     </div>
 <?php
 }
-include("../includes/footer.php");
+include("includes/footer.php");
 ?>
