@@ -12,7 +12,7 @@
               <a class="mt-3" href="mechanic-login.php">Mechanic Login</a>
             </div>
             <div class="col-lg-6 text-center mt-5">
-              Design by-Abhisek praharaj <br>
+              Designed by-Abhisek Praharaj <br>
               <a href="https://www.facebook.com/abhisek.praharaj.1 " target="_blank"> <i class="bi bi-facebook"></i></a>
               <a href="https://www.linkedin.com/in/abhisek-praharaj-1bb62822b/" target="_blank"><i class="bi bi-linkedin"></i></a>
               <a href="https://www.instagram.com/abhisek__praharaj/?utm_medium=copy_link" target="_blank"> <i class="bi bi-instagram"></i></a>

@@ -31,3 +31,10 @@ function isMechanic() {
         return false;
     }
 }
+function isAdmin() {
+    if(isset($_SESSION['admin'])) {
+        return true;
+    } else {
+        return false;
+    }
+}

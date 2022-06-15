@@ -1,5 +1,6 @@
 <?php
 $title = 'Home';
+$activePage = 'home';
 include('includes/head.php');
 ?>
 

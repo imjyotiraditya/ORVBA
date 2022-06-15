@@ -1,5 +1,6 @@
 <?php
 $title = "Our Services";
+$activePage = 'services';
 include("includes/head.php");
 ?>
 <!-- our service -->

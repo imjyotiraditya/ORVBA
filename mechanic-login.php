@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // if submitted
     $email = $_POST['email'];
     $password = md5($_POST['password']);
-    $sql = 'select * from users where email="' . $email . '" AND password="' . $password . '"';
+    $sql = 'select * from mechanics where email="' . $email . '" AND password="' . $password . '"';
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {

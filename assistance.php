@@ -1,10 +1,14 @@
 <?php
 $title = "Assistance";
+$activePage = "assistance";
 include("includes/head.php");
+if (!isLoggedIn()) {
+    header("Location: user-login.php");
+}
 ?>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">Hello User <br>
+        <div class="col-md-8">Hello <?php echo $_SESSION['name']; ?>,<br>
             <form action="assistance.php" method="POST">
                 <div class="form-floating">
                     <input type="text" class="form-control" id="pin" placeholder="Password" name="pin" />
@@ -25,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
 </div>';
   while($row = mysqli_fetch_assoc($result)) {
     echo '<div class="col-md-8 dash justify-content-evenly">
-    '.$row['name'].'
+    '.$row['name'].' <button class="btn btn-danger"><i class="bi bi-telephone"></i> Call</button>
     </div>';
   }
   echo '';

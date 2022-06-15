@@ -13,7 +13,7 @@ include("config.php");
   <!-- icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- CSS -->
-  <link rel="stylesheet" href="/new.css">
+  <link rel="stylesheet" href="/index.css">
   <!-- Aos cdn  -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- font -->
@@ -21,6 +21,26 @@ include("config.php");
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
   <title><?= $title; ?></title>
+  <?php
+  if ($activePage == 'home') {
+    echo '<style>
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 160px;
+    }
+    </style>';
+  } else {
+    echo '<style>
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    </style>';
+  }
+  ?>
 </head>
 
 <body>
@@ -33,21 +53,34 @@ include("config.php");
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <a class="nav-link text-white" href="/user-login.php">Login</a>
-          <li class="nav-item"></li>
-
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
+            <a class="nav-link <?= $activePage == 'home' ? 'active' : ''; ?>" aria-current="page" href="/index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/services.php">Services</a>
+            <a class="nav-link <?= $activePage == 'services' ? 'active' : ''; ?>" href="/services.php">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/blog.php">Blog</a>
+            <a class="nav-link <?= $activePage == 'contact' ? 'active' : ''; ?>" href="contact.php">Contact Us</a>
+          </li>
+          <?php
+          if (isLoggedIn()) {
+          ?>
+          <li class="nav-item">
+            <a class="nav-link <?= $activePage == 'login' ? 'active' : ''; ?>" href="user-login.php"><?= $_SESSION['name']; ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact Us</a>
+            <a class="nav-link <?= $activePage == 'assistance' ? 'active' : ''; ?>" href="assistance.php">Need Assistance?</a>
           </li>
+          <?php
+          } else {
+          ?>
+          <li class="nav-item">
+            <a class="nav-link <?= $activePage == 'login' ? 'active' : ''; ?>" href="user-login.php">Login</a>
+          </li>
+          <?php
+          }
+          ?>
+          ?>
         </ul>
       </div>
     </div>

@@ -1,13 +1,13 @@
 <?php
-$title = "User Login";
+$title = "Admin Login";
 $activePage = 'login';
 include("includes/head.php");
 $error = ''; // var to hold errors
 $show_form = true; // the form will show until this is true
-if(isLoggedIn()) {
+if(isAdmin()) {
     // already logged in
     echo '<div class="container-fluid justify-content-center">
-    <h2 class="text-center">User Login</h2>
+    <h2 class="text-center">Admin Login</h2>
     <div class="row ">
         <div class="col-lg-3">
         </div>
@@ -27,18 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // if submitted
     $email = $_POST['email'];
     $password = md5($_POST['password']);
-    $sql = 'select * from users where email="' . $email . '" AND password="' . $password . '"';
+    $sql = 'select * from admins where email="' . $email . '" AND password="' . $password . '"';
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             // login successful
-            $_SESSION['login'] = 1;
-            $_SESSION['id'] = $row['id'];
+            $_SESSION['admin'] = 1;
             $_SESSION['name'] = $row['name'];
-            $_SESSION['phone'] = $row['phone'];
             $_SESSION['email'] = $row['email'];
         }
-        header("Location: user-login.php");
         $show_form = false; // no need to show form
     } else {
         // email or password wrong
@@ -49,11 +46,11 @@ if ($show_form == true) {
 ?>
     <!-- Form -->
     <div class="container-fluid justify-content-center">
-        <h2 class="text-center Ulogin">User Login</h2>
+        <h2 class="text-center Ulogin">Admin Login</h2>
         <div class="row">
             <div class="col-lg-4"></div>
             <div class="col-lg-4">
-                <form method="post" action="user-login.php">
+                <form method="post" action="admin-login.php">
                     <?php
                     if (!empty($error)) {
                         echo '<div class="alert alert-danger">
@@ -72,9 +69,6 @@ if ($show_form == true) {
                     <br />
                     <button type="submit" class="btn btn-primary">Login</button> <br />
                     <br />
-                    New to ORVBA? <a href="user-register.php" target="_blank">Sign up </a>
-                    <br />
-                    Are you a ORVBA Admin? Click <a href="admin-login.php" target="_blank">here</a> to login.
                 </form>
             </div>
             <div class="col-lg-4"></div>
