@@ -28,8 +28,9 @@ if (mysqli_num_rows($result) > 0) {
   <strong>'.mysqli_num_rows($result).'</strong>  results found for <b>'.$_POST['pin'].'</b>.
 </div>';
   while($row = mysqli_fetch_assoc($result)) {
-    echo '<div class="col-md-8 dash justify-content-evenly">
-    '.$row['name'].' <button class="btn btn-danger"><i class="bi bi-telephone"></i> Call</button>
+    echo '<div class="row mt-3 shadow dash justify-content-between">
+    <div class="col-7">'.$row['name'].'</div>
+    <div class="col-4 text-end"><button class="btn-grad"><i class="bi bi-telephone"></i> Call</button></div>
     </div>';
   }
   echo '';
