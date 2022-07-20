@@ -1,7 +1,7 @@
       <!-- footer -->
       <br/>
-      <footer class="page-footer bg-dark pt-5">
-        <div class=" mt-3">
+      <footer class="page-footer bg-dark padding-if-needed">
+        <div>
           <div class="row justify-content-evenly bg-dark text-white">
             <div class="col-lg-6 ">
               <h2 class="mt-3">Useful Links</h2>
