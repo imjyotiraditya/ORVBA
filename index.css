@@ -53,8 +53,17 @@ select {
 }
 
 .dash {
-  border: 1px solid black;
   padding: 20px;
+  border-radius: 10px;
+  width: 65%;
+  background-color: #E6E6FA;
+}
+
+.btn-grad{
+  border: none;
+  border-radius: 4px;
+  background-color: #12AD2B;
+  color: white;   
 }
 
 /* Contactus */
