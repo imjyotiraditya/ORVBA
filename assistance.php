@@ -8,8 +8,10 @@ if (!isLoggedIn()) {
 ?>
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">Hello <?php echo $_SESSION['name']; ?>,<br>
-            <form action="assistance.php" method="POST">
+        <div class="col-md-8 mt-5">
+            <span style="font-size:25px;">Hello <?php echo $_SESSION['name']; ?>,</span>
+            <br>
+            <form action="assistance.php" method="POST" class="mt-2">
                 <div class="form-floating">
                     <input type="text" class="form-control" id="pin" placeholder="Password" name="pin" />
                     <label for="pin">Search for Pincode</label>
