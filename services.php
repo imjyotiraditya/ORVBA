@@ -58,12 +58,6 @@ include("includes/head.php");
             Locked out? We'll send Roadside Service to help you gain entry—or provide towing based on your
             Membership
         </div>
-        <div class="col-md-3 text-center" id="border" data-aos="fade-up-right" data-aos-duration="1000">
-            <i class="bi bi-battery-charging"></i>
-            <h2>Car Battery Service</h2>
-            We can test your battery and jump-start or replace it with a new one on the spot. Battery replacement
-            not available in all areas.
-        </div>
     </div>
 </div>
 <?php
