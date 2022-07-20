@@ -28,9 +28,6 @@ include('includes/head.php');
         <div class="col-lg-3 bg-dark text-white d-flex p-2" id="content">
             <i class="bi bi-clock"></i> &nbsp; Less than 30 minutes arival
         </div>
-        <div class="col-lg-3 bg-secondary text-white d-flex p-2 " id="content">
-            <i class="bi bi-telephone-outbound"></i> &nbsp; 1111111111
-        </div>
         <div class="col-lg-3 bg-dark text-white d-flex p-2 " id="content">
             <i class="bi bi-telephone"></i> &nbsp; Live 24/7 customer support
         </div>
